@@ -1,0 +1,85 @@
+// Create a project
+POST http://localhost:6000/api/projects HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Finish today's sprint challenge",
+  "description": "Easy, right?"
+}
+
+###
+
+// Create an action for a project by id
+POST http://localhost:6000/api/actions/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "project_id": 1,
+  "description": "description",
+  "notes": "notes"
+}
+
+
+###
+###
+###
+
+
+// Read all projects
+GET http://localhost:6000/api/projects HTTP/1.1
+
+###
+
+// Read project by id
+GET http://localhost:6000/api/projects/1 HTTP/1.1
+
+###
+
+// Read all project's actions by id
+GET http://localhost:6000/api/actions/1 HTTP/1.1
+
+###
+
+// Read project's action by action id
+GET http://localhost:6000/api/actions/1/2 HTTP/1.1
+
+
+###
+###
+###
+
+
+// Update project by id
+PUT http://localhost:6000/api/projects/3 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "ftdghfhfdghfh",
+  "description": "fghfghghfg"
+}
+
+###
+
+// Update an action by action's id
+PUT http://localhost:6000/api/actions/4 HTTP/1.1
+Content-Type: application/json
+
+{
+  "project_id": 1,
+  "description": "Test Test Test",
+  "notes": "Testing!"
+}
+
+
+###
+###
+###
+
+
+// Delete project by id
+DELETE http://localhost:6000/api/projects/4 HTTP/1.1
+
+###
+
+// Delete project's action by id
+DELETE http://localhost:6000/api/actions/4 HTTP/1.1
