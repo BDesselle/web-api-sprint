@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Web API Challenge",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "serve": "nodemon index.js",
+    "start": "node index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LambdaSchool/Sprint-Challenge-Node-Express.git"
@@ -19,11 +22,17 @@
   },
   "homepage": "https://github.com/LambdaSchool/Sprint-Challenge-Node-Express#readme",
   "dependencies": {
-    "helmet": "^3.20.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.0",
     "knex": "^0.19.1",
-    "sqlite3": "^4.0.9"
+    "morgan": "^1.9.1",
+    "ora": "^3.4.0",
+    "sqlite3": "^4.0.9",
+    "swagger-express-middleware": "^2.0.3"
   },
   "devDependencies": {
-    "knex-cleaner": "^1.2.1"
+    "knex-cleaner": "^1.2.1",
+    "nodemon": "^1.19.2"
   }
 }
