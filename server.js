@@ -1,8 +1,13 @@
+const compression = require("compression");
+const helmet = require("helmet");
 const express = require("express");
 const morgan = require("morgan");
 const app = express();
 const projectRouter = require("./routes/projectRouter");
 const actionRouter = require("./routes/actionRouter");
+
+app.use(compression());
+app.use(helmet());
 
 app.use(express.json());
 app.use(morgan("dev"));
